@@ -4,6 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'gdocky',
     environment,
+    lang: 'ru-ru',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -22,6 +23,11 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
+    ENV.apollo = {
+        apiURL: 'http://graphql.ipoteka.loc/gql'
+        /*apiURL: 'https://gql.ipoteka.digital/gql'*/
+    }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

@@ -1,0 +1,13 @@
+<li class="logo">
+
+    <img src="img/logo.png" class="responsive-img">
+
+</li>
+
+{{#each-in types as | label url | }}
+
+    <li class="bold">
+        {{#link-to url class="waves-effect waves-teal"}} {{label}} {{/link-to}}
+    </li>
+
+{{/each-in}}

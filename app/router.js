@@ -7,6 +7,15 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('queries', function() {});
+  this.route('mutations', function() {});
+  this.route('enums', function() {});
+  this.route('scalars', function() {});
+  this.route('inputs', function() {});
+  this.route('objects', function() {});
+  this.route('interfaces', function() {});
+  this.route('unions', function() {});
+  this.route('directives', function() {});
 });
 
 export default Router;
