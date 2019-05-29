@@ -1,1 +1,32 @@
-{{outlet}}
+<div class="row">
+
+    <div class="s12">
+
+        <div class="divider"></div>
+
+        {{type-block
+                data=model
+                type="Queries"
+                isHeaderVisible=false
+                class="section"
+        }}
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="s12">
+
+        {{#each fields as | field |}}
+
+            <div class="divider"></div>
+
+            {{query-mutation-item anchor=anchor id=field.name class="section" data=field}}
+
+        {{/each}}
+
+    </div>
+
+</div>
