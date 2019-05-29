@@ -6,4 +6,10 @@ export default Route.extend({
         return this.modelFor('application');
     },
 
+    resetController: function (controller) {
+        let queryParams = controller.get('queryParams');
+        queryParams.forEach(function (param) {
+            controller.set(param, null);
+        });
+    }
 });
