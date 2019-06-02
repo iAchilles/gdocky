@@ -1,0 +1,63 @@
+<h5 class=" deep-orange-text text-lighten-2">{{@data.name}}</h5>
+<h6 class="grey-text text-darken-1">{{@data.description}}</h6>
+<span class="h6">@returns:
+        {{#if returns.isList}}
+            {{#link-to returns.route returns.name class="deep-orange-text text-lighten-2"}}
+                [{{returns.name}}]
+            {{/link-to}}
+        {{else}}
+            {{#link-to returns.route returns.name class="deep-orange-text text-lighten-2"}}
+                {{returns.name}}
+            {{/link-to}}
+        {{/if}}
+</span>
+
+{{#if arguments}}
+
+    <br><br>
+    <span class="h6">@params:</span>
+
+    <table class="striped">
+        <thead>
+        <tr>
+            <th>{{t "labels.name"}}</th>
+            <th>{{t "labels.type"}}</th>
+            <th>{{t "labels.default"}}</th>
+            <th>{{t "labels.required"}}</th>
+            <th>{{t "labels.description"}}</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {{#each arguments as | arg |}}
+
+            <tr>
+                <td><b>{{arg.name}}</b></td>
+                <td>
+                    {{#if arg.isList}}
+                        {{#link-to arg.route arg.argTypeName class="deep-orange-text text-lighten-2"}}
+                            [{{arg.argTypeName}}]
+                        {{/link-to}}
+                    {{else}}
+                        {{#link-to arg.route arg.argTypeName class="deep-orange-text text-lighten-2"}}
+                            {{arg.argTypeName}}
+                        {{/link-to}}
+                    {{/if}}
+                </td>
+                <td>
+                    {{arg.defaultValue}}
+                </td>
+                <td>
+                    {{#if arg.isRequired}}{{t "yes"}}{{/if}}
+                </td>
+                <td>{{arg.description}}</td>
+            </tr>
+
+        {{/each}}
+
+        </tbody>
+    </table>
+
+
+{{/if}}
