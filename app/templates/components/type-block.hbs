@@ -1,0 +1,62 @@
+{{#if isHeaderVisible}}
+
+    <h5>
+        {{#link-to indexUrl class=" deep-orange-text text-lighten-2"}}
+            {{title}}
+        {{/link-to}}
+    </h5>
+    {{#if description}}
+        <h6 class="grey-text text-darken-1">{{description}}</h6>
+    {{/if}}
+
+{{/if}}
+
+
+{{#if list}}
+
+    <table class="striped">
+        <thead>
+        <tr>
+            <th>{{t "labels.name"}}</th>
+            <th>{{t "labels.description"}}</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {{#each list as | item |}}
+
+            <tr>
+                <td>
+                    {{#if (or (eq type "QUERY") (eq type "MUTATION"))}}
+
+                        {{#link-to indexRoute (query-params anchor=item.name) class="deep-orange-text text-lighten-2"}}
+                            {{item.name}}
+                        {{/link-to}}
+
+                    {{else}}
+
+                        {{#if itemRoute}}
+                            {{#link-to itemRoute item.name class="deep-orange-text text-lighten-2"}}
+                                {{item.name}}
+                            {{/link-to}}
+                        {{else}}
+                            {{item.name}}
+                        {{/if}}
+
+                    {{/if}}
+
+                </td>
+                <td>{{item.description}}</td>
+            </tr>
+
+        {{/each}}
+
+        </tbody>
+    </table>
+
+{{else}}
+
+    <h6>{{t "info.scheme_doesnt_contain_type" type=title}}</h6>
+
+{{/if}}
