@@ -1,13 +1,13 @@
 <li class="logo">
 
-    <img src="img/logo.png" class="responsive-img">
+    {{#link-to "index"}}
+        <img src="/img/logo.png" class="responsive-img">
+    {{/link-to}}
 
 </li>
 
-{{#each-in types as | label url | }}
-
-    <li class="bold">
-        {{#link-to url class="waves-effect waves-teal"}} {{label}} {{/link-to}}
+{{#each-in types as | type item | }}
+    <li class="{{if (or (eq router.currentRouteName item.indexRoute) (eq router.currentRouteName item.itemRoute)) "active" "bold"}}">
+        {{#link-to item.indexRoute class="waves-effect waves-teal"}} {{item.name}} {{/link-to}}
     </li>
-
 {{/each-in}}
