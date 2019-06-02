@@ -1,0 +1,18 @@
+<h5 class="deep-orange-text text-lighten-2">{{field.name}}</h5>
+<h6 class="grey-text text-darken-1">{{field.description}}</h6>
+<span class="h6">@type:
+    {{#link-to field.route field.argTypeName class="deep-orange-text text-lighten-2"}}
+        {{#if field.isList}}
+            [{{field.argTypeName}}]
+        {{else}}
+            {{field.argTypeName}}
+        {{/if}}
+    {{/link-to}}
+
+</span>
+
+{{#if field.isDeprecated}}
+    <br>
+    <span class="h6">@deprecated: {{field.deprecationReason}}</span>
+{{/if}}
+
