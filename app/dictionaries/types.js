@@ -23,7 +23,7 @@ const Types = {
     INPUT_OBJECT: {
         name: 'Input Objects',
         indexRoute: 'inputs.index',
-        itemRoute: 'input.input'
+        itemRoute: 'inputs.input'
     },
     OBJECT: {
         name: 'Objects',
