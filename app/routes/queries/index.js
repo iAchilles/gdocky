@@ -6,6 +6,17 @@ export default Route.extend({
         return this.modelFor('application');
     },
 
+    renderTemplate(controller, model) {
+
+        this.render('queries/index-header-outlet', {
+            into: 'application',
+            outlet: 'header-outlet',
+            controller: controller
+        });
+
+        this._super(controller, model);
+    },
+
     resetController: function (controller) {
         let queryParams = controller.get('queryParams');
         queryParams.forEach(function (param) {
