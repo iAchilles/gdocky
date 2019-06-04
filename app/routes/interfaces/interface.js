@@ -1,14 +1,17 @@
 import Route   from '@ember/routing/route';
+import { get } from '@ember/object';
 
 export default Route.extend({
 
-    model() {
-        return this.modelFor('application');
+    model(params) {
+        let model = this.modelFor('application');
+
+        return get(model, '__schema.types').findBy('name', get(params, 'name'));
     },
 
     renderTemplate(controller, model) {
 
-        this.render('interfaces/index-header-outlet', {
+        this.render('interfaces/interfaces-header-outlet', {
             into: 'application',
             outlet: 'header-outlet',
             controller: controller
@@ -16,4 +19,5 @@ export default Route.extend({
 
         this._super(controller, model);
     }
+
 });
