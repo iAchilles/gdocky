@@ -11,7 +11,7 @@ export default Route.extend({
 
     renderTemplate(controller, model) {
 
-        this.render('interfaces/interfaces-header-outlet', {
+        this.render('interfaces/interface-header-outlet', {
             into: 'application',
             outlet: 'header-outlet',
             controller: controller
