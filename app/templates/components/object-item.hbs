@@ -11,6 +11,11 @@
 
 </span>
 
+{{#if field.isRequired}}
+    <br>
+    <span class="h6">@required</span>
+{{/if}}
+
 {{#if field.isDeprecated}}
     <br>
     <span class="h6">@deprecated: {{field.deprecationReason}}</span>

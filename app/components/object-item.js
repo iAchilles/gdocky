@@ -12,7 +12,8 @@ export default Component.extend({
             isDeprecated: get(field, 'isDeprecated'),
             deprecationReason: get(field, 'deprecationReason'),
             name: get(field, 'name'),
-            description: get(field, 'description')
+            description: get(field, 'description'),
+            isRequired: false
         }
 
         if (get(field, 'type.kind') === 'LIST') {
@@ -31,6 +32,8 @@ export default Component.extend({
             }
 
         } else if (get(field, 'type.kind') === 'NON_NULL') {
+
+            object.isRequired = true;
 
             if (get(field, 'type.ofType.kind') === 'LIST') {
 
