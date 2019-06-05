@@ -21,7 +21,6 @@ module.exports = {
     {
       files: [
         '.eslintrc.js',
-        '.template-lintrc.js',
         'ember-cli-build.js',
         'testem.js',
         'blueprints/*/index.js',

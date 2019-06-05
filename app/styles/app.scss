@@ -6,7 +6,7 @@
   width: 100vw;
 }
 
-.init-preloader-block .preloader-wrapper {
+.init-preloader-block .preloader-wrapper,  .init-preloader-block img {
   margin: 0 auto;
 }
 
@@ -15,11 +15,31 @@
   margin-top: 10px;
 }
 
+.deprecated {
+  text-decoration: line-through;
+}
+
 .logo img {
   display: inline-block;
-  width: 60px;
+  width: 130px;
+}
+
+li.logo:hover a {
+  background-color: #fff;
+}
+
+li.logo a {
+  outline: none;
 }
 
 main, header {
   padding-left: 300px;
+}
+
+.sidenav li.active {
+  background-color: #ee6e73;
+}
+
+.sidenav li.active a{
+  color: #fff;
 }

@@ -5,6 +5,14 @@ import Types        from 'gdocky/dictionaries/types';
 
 export default Component.extend({
 
+    /**
+     * @var {Object} data
+     */
+
+    /**
+     * @var {boolean} isUnion
+     */
+
     field: computed(function () {
         const field  = get(this, 'data');
         let object   = {
@@ -63,9 +71,18 @@ export default Component.extend({
 
         } else {
 
-            let kind           = get(field, 'type.kind');
-            object.argTypeName = get(field, 'type.name');
-            object.route       = get(Types, `${kind}.itemRoute`);
+            if (get(this, 'isUnion')) {
+
+                let kind     = get(field, 'kind');
+                object.route = get(Types, `${kind}.itemRoute`);
+
+            } else {
+
+                let kind           = get(field, 'type.kind');
+                object.argTypeName = get(field, 'type.name');
+                object.route       = get(Types, `${kind}.itemRoute`);
+
+            }
 
         }
 

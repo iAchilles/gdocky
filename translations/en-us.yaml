@@ -1,1 +1,13 @@
-price_banner: The {product} costs {price, number, USD}
+labels:
+  name: "Name"
+  description: "Description"
+  default: "Default"
+  required: "Required"
+  type: "Type"
+
+info:
+  scheme_doesnt_contain_type: "The schema does not contain {type}."
+
+yes: "Yes"
+endpoint: "GraphQL endpoint URL:"
+possible_types: "Possible types"

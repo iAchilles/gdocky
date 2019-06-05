@@ -1,0 +1,13 @@
+labels:
+  name: "Название"
+  description: "Описание"
+  default: "По умолчанию"
+  type: "Тип"
+  required: "Обязательный"
+
+info:
+  scheme_doesnt_contain_type: "Схема не включает определения для {type}."
+
+yes: "Да"
+endpoint: "URL для отправки запросов:"
+possible_types: "Возможные типы"

@@ -1,5 +1,11 @@
-<h5 class="deep-orange-text text-lighten-2 {{if field.isDeprecated "deprecated"}}">{{field.name}}</h5>
-<h6 class="grey-text text-darken-1">{{field.description}}</h6>
+{{#if isUnion}}
+    {{#link-to field.route field.name class="deep-orange-text text-lighten-2"}}
+        <span class="h5 deep-orange-text text-lighten-2 {{if field.isDeprecated "deprecated"}}">{{field.name}}</span>
+    {{/link-to}}
+{{else}}
+    <h5 class="deep-orange-text text-lighten-2 {{if field.isDeprecated "deprecated"}}">{{field.name}}</h5>
+    <h6 class="grey-text text-darken-1">{{field.description}}</h6>
+{{/if}}
 
 {{#if field.argTypeName}}
 
