@@ -1,18 +1,73 @@
 @import 'materialize';
 
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  background-color: #fff;
+}
+
+.page-footer .footer-copyright {
+  background-color: #fff;
+}
+
+.footer-logo {
+  width: 40px;
+  background-image: url("./images/gdocky.png");
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+  vertical-align: text-top;
+}
+
+.page-footer a {
+  font-size: 12px;
+  opacity: 0.5
+}
+
+.page-footer a:hover {
+  font-size: 12px;
+  opacity: 1;
+}
+
+
 .init-preloader-block {
   @extend .valign-wrapper;
   height: 100vh;
   width: 100vw;
 }
 
-.init-preloader-block .preloader-wrapper,  .init-preloader-block img {
+.init-preloader-block .preloader-wrapper,  .init-preloader-block .img {
   margin: 0 auto;
 }
 
 .logo {
   @extend .center-align;
   margin-top: 10px;
+}
+
+li.logo a {
+  font-size: 20px;
+}
+
+.sidenav.sidenav-fixed {
+  height: 100vh;
+}
+
+.img {
+  width: 190px;
+  background-image: url("./images/gdocky.png");
+  height: 76px;
+  display: block;
+  background-size: cover;
 }
 
 .deprecated {

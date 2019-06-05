@@ -4,4 +4,24 @@
 
 </header>
 
-{{outlet}}
+<main>
+    <div class="container">
+
+        <div class="row">
+            <div class="s12">
+                {{outlet "header-outlet"}}
+            </div>
+        </div>
+
+        {{outlet}}
+
+    </div>
+</main>
+
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            <a class="right deep-orange-text text-lighten-2" href="https://github.com/iAchilles/gdocky">Generated with <span class="footer-logo"></span></a>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,19 @@
+<div class="row">
+
+    <div class="s12">
+
+        {{#each-in types as | type |}}
+
+            <div class="divider"></div>
+            {{type-block
+                    data=model
+                    type=type
+                    isHeaderVisible=true
+                    class="section"
+            }}
+
+        {{/each-in}}
+
+    </div>
+
+</div>

@@ -8,7 +8,8 @@ module.exports = function(defaults) {
           includePaths: [
               'node_modules/materialize-css/sass'
           ]
-      }
+      },
+      storeConfigInMeta: false
   });
 
   // Use `app.import` to add additional libraries to the generated

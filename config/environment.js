@@ -2,9 +2,9 @@
 
 module.exports = function(environment) {
   let ENV = {
+    schemaUrl: 'http://graphql.ipoteka.loc/gql',
     modulePrefix: 'gdocky',
     environment,
-    lang: 'ru-ru',
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -23,11 +23,6 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
-    ENV.apollo = {
-        apiURL: 'http://graphql.ipoteka.loc/gql'
-        /*apiURL: 'https://gql.ipoteka.digital/gql'*/
-    }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -50,6 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.schemaUrl = 'https://gql.nostromo.in/gql'
     // here you can enable a production-specific feature
   }
 
