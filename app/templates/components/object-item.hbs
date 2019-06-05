@@ -1,4 +1,4 @@
-<h5 class="deep-orange-text text-lighten-2">{{field.name}}</h5>
+<h5 class="deep-orange-text text-lighten-2 {{if field.isDeprecated "deprecated"}}">{{field.name}}</h5>
 <h6 class="grey-text text-darken-1">{{field.description}}</h6>
 
 {{#if field.argTypeName}}
